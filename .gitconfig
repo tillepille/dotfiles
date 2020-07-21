@@ -1,0 +1,24 @@
+[alias]
+	pmr = push -o merge_request.create -o merge_request.target=master	
+[includeIf "gitdir:~/cc/"]
+	path = .gitconfig-cc
+[includeIf "gitdir:~/bee42/"]
+	path = .gitconfig-bee42
+[includeIf "gitdir:~/territory-bee42/"]
+        path = .gitconfig-territory
+
+
+[includeIf "gitdir:~/dev/github/"]
+	path = .gitconfig-github
+[includeIf "gitdir:~/.dotfiles/"]
+        path = .gitconfig-github
+[includeIf "gitdir:~/dev/gitlab/"]
+	path = .gitconfig-gitlab
+
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

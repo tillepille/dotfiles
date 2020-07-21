@@ -1,0 +1,74 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 13,
+    "editor.tabSize": 2,
+    "window.nativeTabs": true,
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "go.autocompleteUnimportedPackages": true,
+    "go.gocodeAutoBuild": true,
+    "go.docsTool": "gogetdoc",
+    "telemetry.enableTelemetry": false,
+    "auto-close-tag.SublimeText3Mode": true,
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "SauceCodeProNerdFontComplete-Regular",
+    "editor.minimap.enabled": false,
+    "git.enableSmartCommit": true,
+    "editor.fontFamily": "Menlo, Consolas, DejaVu Sans Mono, monospace",
+    "terminal.external.osxExec": "iTerm.app",
+    "go.useLanguageServer": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "go.lintOnSave": "file",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "java.autobuild.enabled": false,
+    "java.import.gradle.enabled": false,
+    "java.import.gradle.wrapper.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "java.semanticHighlighting.enabled": true,
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "yaml.format.enable": true
+}
+
