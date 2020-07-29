@@ -59,6 +59,7 @@ alias kns='kubens'
 alias tf='terraform'
 alias dfb='defaultbrowser'
 alias kca='kubectl get-all'
+alias wk ='watch kubectl'
 alias savenotes='cd ~/dev/gitlab/notable && git stash && git pull && git stash pop && git add --all && git commit -sm "$(date +%Y-%m-%d)" && gp && cd -'
 alias hugoserve='docker run -it --rm -p 1313:1313 -v $(pwd):/hugo solidnerd/hugo server --bind 0.0.0.0'
 alias hugobuild='docker run -it --rm -v $(pwd):/hugo solidnerd/hugo'
@@ -94,4 +95,4 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/Users/tschrumpf/dev/github/git-fuzzy/bin:$PATH"
+export PATH="$HOME/dev/github/git-fuzzy/bin:$PATH"
