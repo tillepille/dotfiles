@@ -87,6 +87,8 @@
           "knobs" : {
             "minwidth" : 0,
             "iTermStatusBarGitComponentPollingIntervalKey" : 2,
+            "base: compression resistance" : 1,
+            "base: priority" : 5,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -94,8 +96,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: priority" : 5,
-            "base: compression resistance" : 1,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
@@ -255,6 +255,10 @@
       "Action" : 10,
       "Text" : "[1;2A"
     },
+    "0xf703-0x300000" : {
+      "Text" : "0x05",
+      "Action" : 11
+    },
     "0xf701-0x280000" : {
       "Action" : 11,
       "Text" : "0x1b 0x1b 0x5b 0x42"
@@ -287,6 +291,10 @@
       "Action" : 10,
       "Text" : "[1;5H"
     },
+    "0xf702-0x300000" : {
+      "Text" : "0x01",
+      "Action" : 11
+    },
     "0xf706-0x20000" : {
       "Action" : 10,
       "Text" : "[1;2R"
@@ -312,8 +320,8 @@
       "Text" : "[1;2D"
     },
     "0xf703-0x280000" : {
-      "Action" : 11,
-      "Text" : "0x1b 0x1b 0x5b 0x43"
+      "Text" : "f",
+      "Action" : 10
     },
     "0xf700-0x240000" : {
       "Action" : 10,
@@ -344,8 +352,8 @@
       "Text" : "[1;6B"
     },
     "0xf702-0x280000" : {
-      "Action" : 11,
-      "Text" : "0x1b 0x1b 0x5b 0x44"
+      "Text" : "b",
+      "Action" : 10
     },
     "0xf72b-0x20000" : {
       "Action" : 10,
