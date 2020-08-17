@@ -69,6 +69,7 @@
         },
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "yaml.format.enable": true
+    "yaml.format.enable": true,
+    "python.languageServer": "Microsoft"
 }
 
