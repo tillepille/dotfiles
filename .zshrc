@@ -64,7 +64,7 @@ alias savenotes='cd ~/dev/gitlab/notable && git stash && git pull && git stash p
 alias hugoserve='docker run -it --rm -p 1313:1313 -v $(pwd):/hugo solidnerd/hugo server --bind 0.0.0.0'
 alias hugobuild='docker run -it --rm -v $(pwd):/hugo solidnerd/hugo'
 alias lzd='lazydocker'
-alias bubu='brew update && brew upgrade && brew cleanup && brew outdated && brew cask upgrade --greedy'
+alias bubu='brew update && brew upgrade && brew cleanup && brew outdated && brew upgrade --cask --greedy'
 alias tfaa='terraform apply -auto-approve'
 alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
