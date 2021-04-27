@@ -1,14 +1,18 @@
 [alias]
-	pmr = push -o merge_request.create -o merge_request.target=master	
-[includeIf "gitdir:~/dev/github/"]
+	pmr = push -o merge_request.create -o merge_request.target=master
+
+[includeIf "gitdir:~/dev/github.com/"]
 	path = .gitconfig-github
+
 [includeIf "gitdir:~/.dotfiles/"]
         path = .gitconfig-github
-[includeIf "gitdir:~/dev/gitlab/"]
+
+[includeIf "gitdir:~/dev/gitlab.com/"]
 	path = .gitconfig-gitlab
 
 [pull]
 	rebase = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
