@@ -21,3 +21,10 @@ echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/tillepille/dotfiles $HOME/.dotfiles
 dotfiles checkout
 ```
+
+Also add
+```
+[include]
+	path = ~/.gitconfig-github
+```
+to this repos config
