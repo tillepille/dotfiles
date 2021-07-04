@@ -10,6 +10,9 @@
 [includeIf "gitdir:~/dev/gitlab.com/"]
 	path = .gitconfig-gitlab
 
+[includeIf "gitdir:~/dev/gitlab.tmecosys.net/"]
+	path = .gitconfig-vwk
+
 [pull]
 	rebase = true
 
