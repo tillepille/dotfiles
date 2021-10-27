@@ -66,7 +66,7 @@ alias hugobuild='docker run -it --rm -v $(pwd):/hugo solidnerd/hugo'
 alias lzd='lazydocker'
 alias bubu='brew update && brew upgrade && brew cleanup && brew outdated && brew upgrade --cask --greedy'
 alias tfaa='terraform apply -auto-approve'
-alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 [ -f ~/.brew.github-api-token ] && source ~/.brew-github-api-token
 export GOPATH=$HOME/go
