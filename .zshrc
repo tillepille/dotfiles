@@ -38,9 +38,6 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-
-
-
 # Uncomment the following line if pasting URLs and other text is messed up.
  DISABLE_MAGIC_FUNCTIONS=true
 
@@ -64,11 +61,13 @@ alias savenotes='cd ~/dev/gitlab.com/tillepille/notable && git stash && git pull
 alias hugoserve='docker run -it --rm -p 1313:1313 -v $(pwd):/hugo solidnerd/hugo server --bind 0.0.0.0'
 alias hugobuild='docker run -it --rm -v $(pwd):/hugo solidnerd/hugo'
 alias lzd='lazydocker'
-alias bubu='brew update && brew upgrade && brew cleanup && brew outdated && brew upgrade --cask --greedy'
+alias bubu='brew update && brew outdated --greedy-auto-updates && brew upgrade --greedy-auto-updates && brew cleanup'
 alias tfaa='terraform apply -auto-approve'
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-[ -f ~/.brew.github-api-token ] && source ~/.brew-github-api-token
+# Brew
+[ -f ~/.brew-github-api-token ] && source ~/.brew-github-api-token
+
 export GOPATH=$HOME/go
 
 # KREW
