@@ -70,6 +70,7 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "yaml.format.enable": true,
-    "python.languageServer": "Microsoft"
+    "python.languageServer": "Default",
+    "terraform.languageServer.enable": true
 }
 
