@@ -1,76 +1,12 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/tls/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-
-POWERLEVEL9K_MODE='nerdfont-complete'
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(kubecontext root_indicator)
-
-POWERLEVEL9K_HOME_ICON='\uf015'
-
-POWERLEVEL9K_KUBECONTEXT_SHOW_DEFAULT_NAMESPACE=false
-
-POWERLEVEL9K_BATTERY_VERBOSE=false
-#POWERLEVEL9K_BATTERY_LEVEL_BACKGROUND=(red3 darkorange3 darkgoldenrod gold3 yellow3 chartreuse2 mediumspringgreen green3 green3 green4 darkgreen)
-POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
-POWERLEVEL9K_BATTERY_CHARGING='yellow'
-POWERLEVEL9K_BATTERY_CHARGED='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-POWERLEVEL9K_BATTERY_LOW_THRESHOLD='20'
-POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%f "
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-
-# Uncomment the following line if pasting URLs and other text is messed up.
- DISABLE_MAGIC_FUNCTIONS=true
-
-
-plugins=(brew zsh-autosuggestions git kubectl docker docker-compose fzf forklift zsh-syntax-highlighting terraform)
-
-source $ZSH/oh-my-zsh.sh
-
-# --- CUSTOM ---
-zstyle ':completion:*' known-hosts-files /dev/null
-
-
-alias q='exit'
-alias kctx='kubectx'
-alias kns='kubens'
-alias tf='terraform'
-alias dfb='defaultbrowser'
-alias kca='kubectl get-all'
-alias wk='watch kubectl'
-alias savenotes='cd ~/dev/gitlab.com/tillepille/notable && git stash && git pull && git stash pop && git add --all && git commit -sm "$(date +%Y-%m-%d)" && gp && cd -'
-alias hugoserve='docker run -it --rm -p 1313:1313 -v $(pwd):/hugo solidnerd/hugo server --bind 0.0.0.0'
-alias hugobuild='docker run -it --rm -v $(pwd):/hugo solidnerd/hugo'
-alias lzd='lazydocker'
-alias bubu='brew update && brew outdated --greedy-auto-updates && brew upgrade --greedy-auto-updates && brew cleanup'
-alias tfaa='terraform apply -auto-approve'
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+autoload -U +X compinit && compinit
 
 # Brew
 [ -f ~/.brew-github-api-token ] && source ~/.brew-github-api-token
 
-export GOPATH=$HOME/go
+# Noob Editor
+export EDITOR=/usr/bin/nano
 
-# KREW
+# Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Kubeconfigs
@@ -79,19 +15,83 @@ set -o shwordsplit
 CONTENT=$(ls -p ~/.kube/ | grep -v / | grep -v kubectx)
 for CONF in $CONTENT; do export KUBECONFIG="${KUBECONFIG}:${HOME}/.kube/${CONF}"; done
 
-HISTFILESIZE=400000000
-HISTSIZE=100000
+# Shell History
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
 
+#Fuzzy search fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.iterm2_statusbar.zsh ] && source ~/.iterm2_statusbar.zsh
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/mc mc
+# 1password
+export OP_ACCOUNT=SMMDLMBWQ5HHTETIQK5BFZYNUE
+eval "$(op completion zsh)"; compdef _op op
 
-export EDITOR=/usr/bin/nano
+# aliases
+alias ..='cd ..~'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias aws-otp='op item get --field type=otp AWS --format json | jq -r .totp |  tr -d n | pbcopy'
+alias awscn-otp='op item get --field type=otp AWS\ CN --format json | jq -r .totp |  tr -d n | pbcopy'
+alias bubu='brew update && brew outdated --greedy-auto-updates && brew upgrade --greedy-auto-updates && brew cleanup'
+alias dco='docker compose'
+alias diff='diff --color'
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias fgrep='grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias g=git
+alias ga='git add'
+alias gaa='git add --all'
+alias gam='git am'
+alias gama='git am --abort'
+alias gamc='git am --continue'
+alias gams='git am --skip'
+alias gamscp='git am --show-current-patch'
+alias gap='git apply'
+alias gb='git branch'
+alias gc='git commit --verbose'
+alias gcb='git checkout -b'
+alias gcl='git clone --recurse-submodules'
+alias gcm='git checkout $(git_main_branch)'
+alias gco='git checkout'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git pull'
+alias gp='git push'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gr='git remote'
+alias grb='git rebase'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias gst='git status'
+alias k=kubectl
+alias kctx=kubectx
+alias kns=kubens
+alias wk='watch kubectl'
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ll='ls -lh'
+alias ls='ls -G'
+alias lsa='ls -lah'
+alias md='mkdir -p'
+alias q=exit
+alias tf=terraform
+alias tfa='terraform apply'
+alias tfaa='terraform apply -auto-approve'
+alias tfd='terraform destroy'
+alias tff='terraform fmt'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tfv='terraform validate'
 
-complete -o nospace -C /usr/local/bin/terraform terraform
-
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="$HOME/dev/github/git-fuzzy/bin:$PATH"
+# starship
+eval "$(starship init zsh)"
