@@ -27,7 +27,7 @@ export OP_ACCOUNT=SMMDLMBWQ5HHTETIQK5BFZYNUE
 eval "$(op completion zsh)"; compdef _op op
 
 # aliases
-alias ..='cd ..~'
+alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
