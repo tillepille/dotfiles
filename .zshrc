@@ -22,6 +22,9 @@ export SAVEHIST=1000000000
 #Fuzzy search fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# kubectl auto-completion
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
 # 1password
 export OP_ACCOUNT=SMMDLMBWQ5HHTETIQK5BFZYNUE
 eval "$(op completion zsh)"; compdef _op op
@@ -62,7 +65,7 @@ alias gb='git branch'
 alias gc='git commit --verbose'
 alias gcb='git checkout -b'
 alias gcl='git clone --recurse-submodules'
-alias gcm='git checkout $(git_main_branch)'
+alias gcm='git checkout $(git branch -rl "*/HEAD" | rev | cut -d/ -f1 | rev)'
 alias gco='git checkout'
 alias gd='git diff'
 alias gf='git fetch'
@@ -99,3 +102,5 @@ eval "$(starship init zsh)"
 # zsh plugins
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /Users/tls/.config/broot/launcher/bash/br
