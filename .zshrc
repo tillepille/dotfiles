@@ -1,3 +1,4 @@
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 autoload -U +X compinit && compinit
 
 # Brew
