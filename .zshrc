@@ -12,16 +12,17 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Kubeconfigs
 KUBECONFIG=~/.kube/config
-set -o shwordsplit
+setopt shwordsplit
 CONTENT=$(ls -p ~/.kube/ | grep -v / | grep -v kubectx)
 for CONF in $CONTENT; do export KUBECONFIG="${KUBECONFIG}:${HOME}/.kube/${CONF}"; done
+unsetopt shwordsplit
 
 # Shell History
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 
-#Fuzzy search fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# #Fuzzy search fzf
+[ $TERM_PROGRAM = "WarpTerminal" ] || [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # kubectl auto-completion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
