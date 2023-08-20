@@ -13,6 +13,9 @@
 [includeIf "gitdir:~/dev/gitlab.tmecosys.net/"]
 	path = .gitconfig-vwk
 
+[includeIf "gitdir:~/dev/aws/"]
+	path = .gitconfig-aws
+
 [pull]
 	rebase = true
 
