@@ -85,8 +85,6 @@
         "class" : "iTermStatusBarGitComponent",
         "configuration" : {
           "knobs" : {
-            "base: compression resistance" : 1,
-            "iTermStatusBarGitComponentPollingIntervalKey" : 2,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -94,8 +92,10 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "minwidth" : 0,
+            "iTermStatusBarGitComponentPollingIntervalKey" : 2,
             "base: priority" : 5,
+            "base: compression resistance" : 1,
+            "minwidth" : 0,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
@@ -214,6 +214,7 @@
   "Unlimited Scrollback" : true,
   "Custom Command" : "No",
   "AWDS Tab Option" : "No",
+  "Title Components" : 6,
   "Keyboard Map" : {
     "0xf700-0x260000" : {
       "Action" : 10,
@@ -493,8 +494,8 @@
     "Green Component" : 0.1491314172744751
   },
   "Semantic History" : {
-    "text" : "",
     "action" : "best editor",
+    "text" : "",
     "editor" : "com.github.atom"
   },
   "Ambiguous Double Width" : false,
@@ -510,7 +511,7 @@
   "AWDS Pane Directory" : "",
   "Blur" : true,
   "Vertical Spacing" : 1.0800000000000001,
-  "Normal Font" : "SauceCodeProNerdFontComplete-Regular 14",
+  "Normal Font" : "SFMonoPowerline-Regular 14",
   "Use Underline Color" : false,
   "Ansi 7 Color" : {
     "Red Component" : 0.99999600648880005,
