@@ -1,2 +1,6 @@
 .dotfiles
 .brew-github-api-token
+
+template
+build
+.secrets

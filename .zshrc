@@ -20,6 +20,9 @@ unsetopt shwordsplit
 # Shell History
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
+setopt share_history
+setopt append_history
+setopt inc_append_history
 
 # #Fuzzy search fzf
 [ $TERM_PROGRAM = "WarpTerminal" ] || [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -97,6 +100,14 @@ alias tff='terraform fmt'
 alias tfi='terraform init'
 alias tfp='terraform plan'
 alias tfv='terraform validate'
+alias tg=terragrunt
+alias tga='terragrunt apply'
+alias tgaa='terragrunt apply -auto-approve'
+alias tgd='terragrunt destroy'
+alias tgf='terragrunt fmt'
+alias tgi='terragrunt init'
+alias tgp='terragrunt plan'
+alias tgv='terragrunt validate'
 
 # starship
 eval "$(starship init zsh)"

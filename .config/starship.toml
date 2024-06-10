@@ -17,4 +17,4 @@ format = 'via [$version]($style) '
 format = '[$symbol \[$name\]]($style) '
 
 [line_break]
-disabled = true
+disabled = false
