@@ -1,6 +1,7 @@
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 autoload -U +X compinit && compinit
 
+XDG_CONFIG_HOME=~/.config
 # Brew
 [ -f ~/.brew-github-api-token ] && source ~/.brew-github-api-token
 
