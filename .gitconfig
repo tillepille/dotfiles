@@ -1,6 +1,3 @@
-[alias]
-	pmr = push -o merge_request.create -o merge_request.target=master
-
 [includeIf "gitdir:~/dev/github.com/"]
 	path = .gitconfig-github
 
@@ -16,14 +13,43 @@
 [includeIf "gitdir:~/dev/aws/"]
 	path = .gitconfig-aws
 
+[column]
+	ui = auto
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[init]
+	defaultBranch = main
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
 [pull]
 	rebase = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[push]
+	autoSetupRemote = true
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[push]
-	autoSetupRemote = true
