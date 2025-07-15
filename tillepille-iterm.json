@@ -76,8 +76,8 @@
           },
           "layout advanced configuration dictionary value" : {
             "font" : "Menlo-Regular 11",
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       },
@@ -85,7 +85,7 @@
         "class" : "iTermStatusBarGitComponent",
         "configuration" : {
           "knobs" : {
-            "minwidth" : 0,
+            "maxwidth" : 1.7976931348623157e+308,
             "iTermStatusBarGitComponentPollingIntervalKey" : 2,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
@@ -94,14 +94,14 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: priority" : 5,
             "base: compression resistance" : 1,
-            "maxwidth" : 1.7976931348623157e+308
+            "minwidth" : 0,
+            "base: priority" : 5
           },
           "layout advanced configuration dictionary value" : {
             "font" : "Menlo-Regular 11",
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       },
@@ -115,8 +115,8 @@
             "iTermStatusBarSpringComponentSizeMultipleKey" : 1
           },
           "layout advanced configuration dictionary value" : {
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       },
@@ -130,8 +130,8 @@
             "iTermStatusBarSpringComponentSizeMultipleKey" : 1
           },
           "layout advanced configuration dictionary value" : {
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       },
@@ -145,8 +145,8 @@
             "iTermStatusBarSpringComponentSizeMultipleKey" : 1
           },
           "layout advanced configuration dictionary value" : {
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       },
@@ -165,16 +165,16 @@
           },
           "layout advanced configuration dictionary value" : {
             "font" : "Menlo-Regular 11",
-            "algorithm" : 0,
-            "auto-rainbow style" : 0
+            "auto-rainbow style" : 0,
+            "algorithm" : 0
           }
         }
       }
     ],
     "advanced configuration" : {
       "font" : "Menlo-Regular 11",
-      "algorithm" : 0,
-      "auto-rainbow style" : 0
+      "auto-rainbow style" : 0,
+      "algorithm" : 0
     }
   },
   "Flashing Bell" : false,
@@ -216,15 +216,15 @@
   "AWDS Tab Option" : "No",
   "Title Components" : 6,
   "Keyboard Map" : {
-    "0xf702-0x300000-0x7b" : {
-      "Version" : 1,
-      "Action" : 11,
-      "Text" : "0x01",
+    "0xf702-0x280000-0x0" : {
+      "Version" : 0,
+      "Action" : 10,
+      "Text" : "b",
       "Label" : ""
     },
     "0xf702-0x280000" : {
-      "Text" : "b",
-      "Action" : 10
+      "Action" : 10,
+      "Text" : "b"
     },
     "0xf703-0x280000-0x0" : {
       "Version" : 0,
@@ -233,8 +233,8 @@
       "Label" : ""
     },
     "0xf702-0x300000" : {
-      "Text" : "0x01",
-      "Action" : 11
+      "Action" : 11,
+      "Text" : "0x01"
     },
     "0xf703-0x300000-0x7c" : {
       "Version" : 1,
@@ -243,17 +243,17 @@
       "Label" : ""
     },
     "0xf703-0x280000" : {
-      "Text" : "f",
-      "Action" : 10
+      "Action" : 10,
+      "Text" : "f"
     },
     "0xf703-0x300000" : {
-      "Text" : "0x05",
-      "Action" : 11
+      "Action" : 11,
+      "Text" : "0x05"
     },
-    "0xf702-0x280000-0x0" : {
-      "Version" : 0,
-      "Action" : 10,
-      "Text" : "b",
+    "0xf702-0x300000-0x7b" : {
+      "Version" : 1,
+      "Action" : 11,
+      "Text" : "0x01",
       "Label" : ""
     }
   },
@@ -342,9 +342,9 @@
     "Green Component" : 0.1491314172744751
   },
   "Semantic History" : {
+    "editor" : "com.github.atom",
     "text" : "",
-    "action" : "best editor",
-    "editor" : "com.github.atom"
+    "action" : "best editor"
   },
   "Ambiguous Double Width" : false,
   "Blur Radius" : 10.546329711294415,
@@ -403,6 +403,7 @@
   },
   "Screen" : -1,
   "AWDS Window Option" : "No",
+  "Load Shell Integration Automatically" : true,
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
     "Red Component" : 0.67381459474563599,
