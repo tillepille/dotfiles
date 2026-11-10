@@ -25,8 +25,8 @@ setopt share_history
 setopt append_history
 setopt inc_append_history
 
-# #Fuzzy search fzf
-[ $TERM_PROGRAM = "WarpTerminal" ] || [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # kubectl auto-completion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
@@ -126,3 +126,19 @@ source /Users/tls/.config/broot/launcher/bash/br
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Added by Antigravity
+export PATH="/Users/tls/.antigravity/antigravity/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/tls/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tls/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# Added by Antigravity IDE
+export PATH="/Users/tls/.antigravity-ide/antigravity-ide/bin:$PATH"
